@@ -3,18 +3,20 @@ include("../db.php");
 
 $sql = "
 UPDATE bf_bills_extra
-SET cust_bday = NULL
+SET cust_bday = (
+    DATE_ADD(
+        '1950-01-01',
+        INTERVAL FLOOR(RAND() * DATEDIFF('2010-01-01', '1950-01-01')) DAY
+    )
+)
 WHERE id > 182
-  AND YEAR(cust_bday) = 2025
-  AND cust_bday BETWEEN '2025-01-01' AND '2025-07-01'
 ";
 
-// Execute the query
 $result = mysqli_query($conn, $sql);
 
 if ($result) {
-    echo "cust_bday updated successfully.";
+    echo "cust_bday updated with random date before 2010.";
 } else {
-    echo "Error updating records: " . mysqli_error($conn);
+    echo "Error: " . mysqli_error($conn);
 }
 ?>
