@@ -1,5 +1,5 @@
 <?php
-include("../db.php");
+include("../../../db.php");
 
 $sql = "
 UPDATE bf_bills_extra

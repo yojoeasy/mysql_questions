@@ -1,23 +1,22 @@
 <?php 
 include("../../../db.php");
 
-$sql = "SELECT state_id, COUNT(*) AS total_cities
-FROM bf_city
-GROUP BY state_id
--- ORDER BY total_cities DESC
+$sql = "SELECT b.user_phone
+FROM bf_bills_archive b
+JOIN bf_country c ON b.dial_code = c.dial_code
+WHERE c.country_name = 'India'
 ";
 $result = mysqli_query($conn , $sql);
 ?>
 
-<h2>City Count by State</h2>
+<h1>City Count by State</h1>
 
 <?php
     if (mysqli_num_rows($result) > 0) {
         echo "<table border='1'>";
         echo "<tr>
                 <th>Sr. No.</th>
-                <th>State ID</th>
-                <th>No. of Cities</th>
+                <th>Phone No.</th>
             </tr>";
 
         $sr = 1; // Start counter
@@ -25,8 +24,7 @@ $result = mysqli_query($conn , $sql);
         while ($row = mysqli_fetch_assoc($result)) {
             echo "<tr>
                     <td>{$sr}</td>
-                    <td>{$row['state_id']}</td>
-                    <td>{$row['total_cities']}</td>
+                    <td>{$row['user_phone']}</td>
                 </tr>";
             $sr++; // Increment counter
         }

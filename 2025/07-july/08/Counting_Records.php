@@ -1,6 +1,6 @@
 <?php
 // Count how many feedbacks are recorded in total.
-include("../db.php");
+include("../../../db.php");
 
 // Write a SELECT COUNT query
 $sql = "SELECT COUNT(*) AS total_feedbacks FROM bf_alt_feedback";

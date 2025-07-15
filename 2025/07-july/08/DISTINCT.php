@@ -2,7 +2,7 @@
 // Use of DISTINCT
 // List all unique values in the fb_type column.
 
-include("../db.php");
+include("../../../db.php");
 
 // Write a SELECT query
 $sql = "SELECT DISTINCT fb_type FROM bf_alt_feedback";

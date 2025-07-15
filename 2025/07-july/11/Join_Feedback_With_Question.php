@@ -2,7 +2,7 @@
 // Join Feedback With Question
 // Get the feedback given along with the feedback question title from bf_alt_feedback.
 
-include("../db.php");
+include("../../../db.php");
 
 $sql = "SELECT 
   f.bill_id AS `Bill Id`,

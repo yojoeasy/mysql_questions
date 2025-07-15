@@ -1,7 +1,7 @@
 <?php
 // Count how many coupons were issued by each disc_type (amount/percent/buy-one-get-one).
 
-include("../db.php");
+include("../../../db.php");
 
 // $sql = "SELECT disc_type, COUNT(*) AS total
 // FROM bf_coupons

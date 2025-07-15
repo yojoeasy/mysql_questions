@@ -1,7 +1,7 @@
 <?php
 // Find records where inv_no in bf_bills_archive matches inv_no in bf_bills_extra.
 
-include("../db.php");
+include("../../../db.php");
 
 // Write a SELECT query
 $sql = "SELECT a.inv_no as inv_no, a.bill_id as bill_id, e.quantity as quantity, e.cust_name as cust_name

@@ -1,7 +1,7 @@
 <?php
 // Get the list of customers whose birthday is in next 7 days from today (assuming cust_bday is used).
 
-include("../db.php");
+include("../../../db.php");
 
 // Write a SELECT query
 $sql = "SELECT cust_name as `Customer Name`, cust_bday as `Customer Birthday`

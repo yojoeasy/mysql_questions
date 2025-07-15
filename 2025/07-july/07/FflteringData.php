@@ -1,5 +1,5 @@
 <?php
-include("../db.php");
+include("../../../db.php");
 
 // Write a SELECT query
 $sql = "SELECT * FROM bf_alt_feedback WHERE fb_type = 'thumbs'";

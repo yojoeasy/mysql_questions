@@ -1,7 +1,7 @@
 <?php
 // Get all bills generated in the month of June 2025.
 
-include("../db.php");
+include("../../../db.php");
 
 // Write a SELECT query
 $sql = "SELECT * FROM bf_bills_archive WHERE bill_date BETWEEN '2015-06-01' AND '2025-06-30'";

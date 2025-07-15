@@ -1,7 +1,7 @@
 <?php
 // Find all unused and valid coupons as of today.
 
-include("../db.php");
+include("../../../db.php");
 
 // Write a SELECT query
 $sql = "SELECT coupon_code, title, user_phone, validity_date

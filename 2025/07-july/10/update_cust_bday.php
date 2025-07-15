@@ -4,7 +4,7 @@
 // Take values from rows with id = 1 to id = 182 as a reference sequence.
 // And repeat those cust_bday values in order for all NULL rows.
 
-include("../db.php");
+include("../../../db.php");
 
 // Step 1: Initialize counter
 mysqli_query($conn, "SET @row := 0");

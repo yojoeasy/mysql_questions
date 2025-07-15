@@ -1,5 +1,5 @@
 <?php 
-include("../db.php");
+include("../../../db.php");
 
 // Get state_id from input, default to 17 if not set or invalid
 $state_id = isset($_GET['state_id']) && is_numeric($_GET['state_id']) && $_GET['state_id'] >= 1 && $_GET['state_id'] <= 36 ? (int)$_GET['state_id'] : 17;

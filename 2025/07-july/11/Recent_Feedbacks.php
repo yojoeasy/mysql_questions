@@ -2,7 +2,7 @@
 // Recent Feedbacks with Ratings
 // Fetch the 10 most recent feedback entries with non-null ratings.
 
-include("../db.php");
+include("../../../db.php");
 
 // Write a SELECT query
 $sql = "SELECT bill_id, rating, comment, date_added
